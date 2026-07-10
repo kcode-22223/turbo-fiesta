@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,13 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #ffffff;
+            padding: 20px 0;
         }
         p {
             margin: 0 0 15px 0;
@@ -33,11 +34,45 @@
             background-color: #e5e5e5;
             border-color: #4f4f4f;
         }
+
+        /* Styling for the new "or..." text */
+        .divider-text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #555555;
+            margin: 20px 0;
+        }
+
+        #flash-container {
+            width: 800px;
+            height: 600px;
+            border: 1px solid #767676;
+            background-color: #000000;
+        }
     </style>
 </head>
 <body>
+
     <p>download</p>
     <a href="DROPOFSHAME.swf" download="DROPOFSHAME.swf" class="download-button">download button</a>
+
+    <div class="divider-text">or...</div>
+
+    <div id="flash-container"></div>
+
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("flash-container");
+            container.appendChild(player);
+            
+            player.load("DROPOFSHAME.swf");
+        });
+    </script>
 
 </body>
 </html>

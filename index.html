@@ -43,8 +43,8 @@
         }
 
         #flash-container {
-            width: 960px;  
-            height: 540px; 
+            width: 800px;  
+            height: 600px; 
             border: 1px solid #767676;
             background-color: #000000;
         }
@@ -63,6 +63,13 @@
 
     <script>
         window.RufflePlayer = window.RufflePlayer || {};
+        
+        window.RufflePlayer.config = {
+            "scale": "showAll",
+            "forceScale": true,
+            "letterbox": "on"
+        };
+
         window.addEventListener("load", (event) => {
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();

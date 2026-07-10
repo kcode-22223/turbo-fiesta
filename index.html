@@ -15,7 +15,7 @@
             background-color: #ffffff;
             padding: 20px 0;
         }
-         {
+        p {
             margin: 0 0 15px 0;
             font-size: 16px;
         }
@@ -35,7 +35,6 @@
             border-color: #4f4f4f;
         }
 
-        /* Styling for the new "or..." text */
         .divider-text {
             font-family: Arial, sans-serif;
             font-size: 14px;
@@ -44,8 +43,8 @@
         }
 
         #flash-container {
-            width: 800px;
-            height: 600px;
+            width: 960px;  
+            height: 540px; 
             border: 1px solid #767676;
             background-color: #000000;
         }
@@ -64,11 +63,6 @@
 
     <script>
         window.RufflePlayer = window.RufflePlayer || {};
-        window.RufflePlayer.config = {
-            "scale": "exactFit",
-            "letterbox": "off"
-        };
-
         window.addEventListener("load", (event) => {
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();

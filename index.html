@@ -64,6 +64,11 @@
 
     <script>
         window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "scale": "exactFit",
+            "letterbox": "off"
+        };
+
         window.addEventListener("load", (event) => {
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
